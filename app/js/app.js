@@ -162,6 +162,16 @@ function nextSchedule() {
   showSchedule(keys[i]);
 }
 
+// only used in testing
+function previousSchedule() {
+  var keys = Object.keys(SCHEDULE);
+  var i = keys.indexOf(lastDue) - 1;
+  if (i > keys.length) i = 0;
+
+  showSchedule(keys[i]);
+}
+
+
 function getInstagram(id, url) {
   window['embed' + id] = function (data) {
     if (data.type == 'photo') {
@@ -360,8 +370,8 @@ function init() {
 
   if (config.debug) {
     twitterlib.debug({
-      'list': '../history/data/list%page%.json?callback=callback',
-      'search': '../history/data/search%page%.json?callback=callback'
+      'list': '../history/data/list1.json?callback=callback',
+      'search': '../history/data/search1.json?callback=callback'
     });
   }
 
@@ -499,10 +509,21 @@ var twitterQueue = new Queue(config.timings.showTweetsEvery || 3000, function (i
 // click on the schedule to move forward (for testing)
 $scheduleContainer.click(nextDue);
 
-// space pauses twitter feed
 $(window).keydown(function (event) {
-  if (event.which === 32) {
-    twitterQueue.toggle();
+  console.log(event.which)
+  switch(event.which){
+    case 32: // space pauses twitter feed
+      twitterQueue.toggle();
+      break;
+    case 38: // up moves schedule backwards
+      if(config.debug == true){
+        previousSchedule()
+      }
+      break;
+    case 40: // down moves schedule backwards
+      nextDue()
+      break;
+    default: // do nothing
   }
 });
 
