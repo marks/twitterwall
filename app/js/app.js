@@ -153,7 +153,6 @@ function nextDue() {
   showSchedule(findNextSchedule(0, lastDue));
 }
 
-// only used in testing
 function nextSchedule() {
   var keys = Object.keys(SCHEDULE);
   var i = keys.indexOf(lastDue) + 1;
@@ -162,12 +161,10 @@ function nextSchedule() {
   showSchedule(keys[i]);
 }
 
-// only used in testing
 function previousSchedule() {
   var keys = Object.keys(SCHEDULE);
   var i = keys.indexOf(lastDue) - 1;
-  if (i > keys.length) i = 0;
-
+  if (i < (keys.length-1)) i = 0;
   showSchedule(keys[i]);
 }
 
@@ -515,9 +512,7 @@ $(window).keydown(function (event) {
       twitterQueue.toggle();
       break;
     case 38: // up moves schedule backwards
-      if(config.debug == true){
-        previousSchedule()
-      }
+      previousSchedule()
       break;
     case 40: // down moves schedule backwards
       nextDue()
