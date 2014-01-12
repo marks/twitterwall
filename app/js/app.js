@@ -510,7 +510,6 @@ var twitterQueue = new Queue(config.timings.showTweetsEvery || 3000, function (i
 $scheduleContainer.click(nextDue);
 
 $(window).keydown(function (event) {
-  console.log(event.which)
   switch(event.which){
     case 32: // space pauses twitter feed
       twitterQueue.toggle();
