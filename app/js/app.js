@@ -493,7 +493,7 @@ var twitterQueue = new Queue(config.timings.showTweetsEvery || 3000, function (i
       tweetClone = tweet.clone().hide().css({ visibility: 'hidden' }).prependTo($tweets).slideDown(1000);
 
   tweet.css({ top: -200, position: 'absolute' }).prependTo($tweets).animate({
-    top: 0
+    top: 106
   }, 1000, function () {
     tweetClone.css({ visibility: 'visible' });
     $(this).remove();
