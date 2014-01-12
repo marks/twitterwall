@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+
+<nav class="top-bar" data-top-bar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Indy Big Data 2014</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><a href="#">Right Nav Button</a></li>
+      <li><a href="#">Right Nav Button</a></li>
+      <li><a href="#">Right Nav Button</a></li>
+    </ul>
+  </section>
+</nav>
+
+<br />
+
+<div class="row">
+  <div class="large-5 columns">
+    <h4>Now</h4>
+    <div class="panel">
+      <p>Lorem Ipsum</p>
+    </div>
+
+    <h4>Up Next</h4>
+    <div class="panel">
+      <p>Lorem Ipsum</p>
+    </div>
+
+    <h4>Thank You To Our Sponsors</h4>
+    <ul data-orbit>
+      <li>
+        <img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
+        <div class="orbit-caption">
+          Caption One.
+        </div>
+      </li>
+      <li>
+        <img src="../assets/img/examples/andromeda-orbit.jpg" alt="slide 2" />
+        <div class="orbit-caption">
+          Caption Two.
+        </div>
+      </li>
+      <li>
+        <img src="../assets/img/examples/launch-orbit.jpg" alt="slide 3" />
+        <div class="orbit-caption">
+          Caption Three.
+        </div>
+      </li>
+    </ul>
+
+    <!-- appease remy/twitterwall -->
+    <div id="schedule"><div data-time="0730"></div></div>
+  </div>
+  <div class="large-7 columns">
+    <h4>Tweet Wall</h4>
+    <div data-alert class="alert-box">
+      <strong>Your name could be here:</strong> Just tweet with hashtag #indybigdata
+      <a href="#" class="close">&times;</a>
+    </div>
+
+    <div id="twitterwall"> 
+      <ul id="tweets">
+<!-- 
+        <li id="421663823662030848" style="visibility: visible; overflow: hidden;"><div class="tweet"><div class="row"><div class="large-2 columns small-3"><a href="http://twitter.com/KyleAnderson1" class="url"><img style="height: 48px; width: 48px;" alt="@KyleAnderson1" class="photo fn" height="48" src="http://pbs.twimg.com/profile_images/3353983200/3267b5cb30f561f9c82b273118fc831d_normal.jpeg" width="48"></a></div><div class="large-10 columns"><strong><a href="http://twitter.com/KyleAnderson1" title="Kyle Anderson">KyleAnderson1 </a></strong><span class="entry-content">I registered for Indy Big Data Conference - might be interesting for some of you:  <a title="http://indybigdata.com/" href="http://indybigdata.com/">indybigdata.com/</a></span><br /><span class="meta entry-meta"><a href="http://twitter.com/KyleAnderson1/status/421663823662030848" class="entry-date" rel="bookmark"><span class="published" title="Fri Jan 10 15:24:24 +0000 2014">3:24 PM Jan 10th</span></a></span></div></div></div></li>
+        <li id="421663823662030848" style="visibility: visible; overflow: hidden;"><div class="tweet"><div class="row"><div class="large-2 columns small-3"><a href="http://twitter.com/KyleAnderson1" class="url"><img style="height: 48px; width: 48px;" alt="@KyleAnderson1" class="photo fn" height="48" src="http://pbs.twimg.com/profile_images/3353983200/3267b5cb30f561f9c82b273118fc831d_normal.jpeg" width="48"></a></div><div class="large-10 columns"><strong><a href="http://twitter.com/KyleAnderson1" title="Kyle Anderson">@KyleAnderson1 </a></strong><span class="entry-content">I registered for Indy Big Data Conference - might be interesting for some of you:  <a title="http://indybigdata.com/" href="http://indybigdata.com/">indybigdata.com/</a></span><br /><span class="meta entry-meta"><a href="http://twitter.com/KyleAnderson1/status/421663823662030848" class="entry-date" rel="bookmark"><span class="published" title="Fri Jan 10 15:24:24 +0000 2014">3:24 PM Jan 10th</span></a></span></div></div></div></li>
+ --> 
+      </ul> 
+    </div> 
+
+    <script type="text/html" id="tweet_template">
+      <li id="<%=id%>">
+        <div class="tweet">
+          <div class="row">
+            <div class="large-2 columns small-3">
+              <a href="http://twitter.com/<%=screen_name%>" class="url"><img style="height: 48px; width: 48px;" alt="@<%=screen_name%>" class="photo fn" height="48" src="<%=profile_image_url%>" width="48" /></a>
+            </div>
+            <div class="large-1 columns">
+              <strong><a href="http://twitter.com/<%=screen_name%>" title="<%=name%>"><%=screen_name%> </a></strong> 
+              <span class="entry-content"><%=tweet%></span>
+              <br />
+              <span class="meta entry-meta"><a href="http://twitter.com/<%=screen_name%>/status/<%=id%>" class="entry-date" rel="bookmark"><span class="published" title="<%=created_at%>"><%=nice_date%></span></a></span>
+              <% if (embeds.length) for (var i = 0; i < embeds.length; i++) { %>
+                <%=embeds[i]%>
+              <% } %>
+            </div>
+
+          </div>
+        </div>
+      </li>
+    </script>
+
+  </div>
+</div>
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="../config.js"></script>
+    <script src="../app/js/twitterlib.js"></script> 
+    <script src="../app/js/jquery.min.js"></script> 
+    <script src="../app/js/app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,4 @@
+.top-bar,.top-bar-section li a:not(.button){background:#ec2127;}
+ul#tweets { margin-left: 0em; list-style-type: none; }
+ul#tweets li{padding:5px 0 5px 0px; border-bottom:thin dotted gray;}
+img.photo{margin-top:5px;}
