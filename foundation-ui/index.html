@@ -31,46 +31,47 @@
 
 <div class="row">
   <div class="large-5 columns">
-    <h4>Now</h4>
-    <div class="panel">
-      <p>Lorem Ipsum</p>
-    </div>
 
-    <h4>Up Next</h4>
-    <div class="panel">
-      <p>Lorem Ipsum</p>
-    </div>
+          <h4>Now (through 9:00am)</h4>
+        <div class="panel">
+          <p>
+            TBD once given access to sched.org API; example:
+              http://indybigdataconference2014.sched.org
+              /api/session/list?format=json&api_key=
+              6fc47fd02d4c0f29d24d6327ffaf217a
+          </p>
+        </div>
+
+        <h4>Up Next</h4>
+        <div class="panel">
+          <p>Lorem Ipsum</p>
+        </div>
+    <!-- not using remy/twitterwall schedule functionality -->
+    <div id="schedule"><div id="remy" data-time="0730"></div></div>
+
 
     <h4>Thank You To Our Sponsors</h4>
     <ul data-orbit>
       <li>
-        <img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
-        <div class="orbit-caption">
-          Caption One.
-        </div>
+        <img src="img/Beyond_Predective1.png" alt="Beyond Predictive" />
+        <div class="orbit-caption">Beyond Predictive</div>
       </li>
       <li>
-        <img src="../assets/img/examples/andromeda-orbit.jpg" alt="slide 2" />
-        <div class="orbit-caption">
-          Caption Two.
-        </div>
+        <img src="img/Beyond_Predective1.png" alt="Beyond Predictive" />
+        <div class="orbit-caption">Beyond Predictive</div>
       </li>
       <li>
-        <img src="../assets/img/examples/launch-orbit.jpg" alt="slide 3" />
-        <div class="orbit-caption">
-          Caption Three.
-        </div>
+        <img src="img/Beyond_Predective1.png" alt="Beyond Predictive" />
+        <div class="orbit-caption">Beyond Predictive</div>
       </li>
+
     </ul>
 
-    <!-- appease remy/twitterwall -->
-    <div id="schedule"><div data-time="0730"></div></div>
   </div>
   <div class="large-7 columns">
     <h4>Tweet Wall</h4>
     <div data-alert class="alert-box">
       <strong>Your name could be here:</strong> Just tweet with hashtag #indybigdata
-      <a href="#" class="close">&times;</a>
     </div>
 
     <div id="twitterwall"> 
@@ -89,7 +90,7 @@
             <div class="large-2 columns small-3">
               <a href="http://twitter.com/<%=screen_name%>" class="url"><img style="height: 48px; width: 48px;" alt="@<%=screen_name%>" class="photo fn" height="48" src="<%=profile_image_url%>" width="48" /></a>
             </div>
-            <div class="large-1 columns">
+            <div class="large-10 columns">
               <strong><a href="http://twitter.com/<%=screen_name%>" title="<%=name%>"><%=screen_name%> </a></strong> 
               <span class="entry-content"><%=tweet%></span>
               <br />

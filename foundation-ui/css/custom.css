@@ -2,3 +2,4 @@
 ul#tweets { margin-left: 0em; list-style-type: none; }
 ul#tweets li{padding:5px 0 5px 0px; border-bottom:thin dotted gray;}
 img.photo{margin-top:5px;}
+.orbit-slides-container img{margin:0 auto 0 auto;}
