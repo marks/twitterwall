@@ -32,23 +32,20 @@
 <div class="row">
   <div class="large-5 columns">
 
-          <h4>Now (through 9:00am)</h4>
-        <div class="panel">
-          <p>
-            TBD once given access to sched.org API; example:
-              http://indybigdataconference2014.sched.org
-              /api/session/list?format=json&api_key=
-              6fc47fd02d4c0f29d24d6327ffaf217a
-          </p>
-        </div>
+    <h4>Happening Now (through X:XX)</h4>
+    <div class="panel">
+      <p>To be implemented</p>
+    </div>
 
-        <h4>Up Next</h4>
-        <div class="panel">
-          <p>Lorem Ipsum</p>
-        </div>
-    <!-- not using remy/twitterwall schedule functionality -->
-    <div id="schedule"><div id="remy" data-time="0730"></div></div>
+    <h4>Up Next (X:XX to X:XX)</h4>
+    <div class="panel">
+      <p>To be implemented</p>
+    </div>
 
+    <h4><a href='http://indybigdata.com/agenda/' target='blank'>Full Schedule</a></h4>
+    <div class="panel">
+      <ul id="sessions"></ul>
+    </div>
 
     <h4>Thank You To Our Sponsors</h4>
     <ul data-orbit>
@@ -66,6 +63,9 @@
       </li>
 
     </ul>
+
+    <!-- not using remy/twitterwall schedule functionality, leave this as is -->
+    <div id="schedule"><div id="remy" data-time="0730"></div></div>
 
   </div>
   <div class="large-7 columns">
@@ -118,6 +118,8 @@
     <script src="../app/js/twitterlib.js"></script> 
     <script src="../app/js/jquery.min.js"></script> 
     <script src="../app/js/app.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/custom.js"></script>
 
   </body>
 </html>
