@@ -1,9 +1,8 @@
-var schedule_url = "http://indybigdataconference2014.sched.org/api/session/list?format=json&api_key=6fc47fd02d4c0f29d24d6327ffaf217a"
 var schedule_data;
 
 $( document ).ready(function() {
   // fetch schedule
-  var getSchedule = $.getJSON(schedule_url)
+  var getSchedule = $.getJSON(config.schedule.urlToJSON)
     .done(processSchedule)
 
 });
@@ -30,14 +29,13 @@ function updateSchedule(selector){
   var schedule_html = ""
   $.each(schedule_data,function(n,session){
     start = moment(session.event_start)
-    console.log(start)
     schedule_html += "<li>"
-    // schedule_html += "<pre>"+JSON.stringify(session,undefined,2)+"</pre>"
     schedule_html += "<strong><a href='http://indybigdataconference2014.sched.org/event/"+session.id+"' target='blank'>"+session.name+"</a></strong>"
     console.log(moment(session.start_date).fromNow())
     schedule_html += "<br />"
     schedule_html += "<em>"+start.fromNow()+"</em> ("+start.format('MMM Do YYYY, h:mm a')+")"
     schedule_html += "</li>"
+    // schedule_html += "<pre>"+JSON.stringify(session,undefined,2)+"</pre>"
   })
   $(selector).html(schedule_html)
 }
